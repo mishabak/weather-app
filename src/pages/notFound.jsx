@@ -1,7 +1,15 @@
+import { Fragment } from "react"
+import { Helmet } from "react-helmet"
 
 function NotFound() {
   return (
-    <div>404</div>
+    <Fragment>
+       <Helmet>
+        <title>Weather App - 404</title>
+      </Helmet>
+      <section>
+      </section>
+    </Fragment>
   )
 }
 
