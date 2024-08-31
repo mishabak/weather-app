@@ -10,6 +10,8 @@ import "./App.css";
 
 const Home = lazy(() => import("./pages/home"));
 const NotFound = lazy(() => import("./pages/notFound"));
+const List = lazy(() => import("./pages/list"));
+
 function App() {
   return (
     <Router>
@@ -18,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to={`weather`} />} />
             <Route path="/weather" element={<Home />} />
+            <Route path="/list" element={<List />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </Suspense>

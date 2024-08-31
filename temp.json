@@ -1,0 +1,34 @@
+{
+  "cities": [
+    {
+      "name": "Delhi",
+      "country": "India",
+      "latitude": 28.6139,
+      "longitude": 77.209
+    },
+    {
+      "name": "Moscow",
+      "country": "Russia",
+      "latitude": 55.7558,
+      "longitude": 37.6173
+    },
+    {
+      "name": "Paris",
+      "country": "France",
+      "latitude": 48.8566,
+      "longitude": 2.3522
+    },
+    {
+      "name": "New York",
+      "country": "United States of America",
+      "latitude": 40.7128,
+      "longitude": -74.006
+    },
+    {
+      "name": "Sydney",
+      "country": "Australia",
+      "latitude": -33.8688,
+      "longitude": 151.2093
+    }
+  ]
+}

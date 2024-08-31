@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import propTypes from "prop-types";
 
-const CustomAnimate = ({ children, variant = {}, className }) => {
+const CustomAnimate = ({ children, className = "", variant = {} }) => {
   return (
     <motion.div
       className={className}
@@ -12,6 +13,12 @@ const CustomAnimate = ({ children, variant = {}, className }) => {
       {children}
     </motion.div>
   );
+};
+
+CustomAnimate.propTypes = {
+  children: propTypes.node,
+  variant: propTypes.object,
+  className: propTypes.string,
 };
 
 export default CustomAnimate;

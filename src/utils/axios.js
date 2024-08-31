@@ -1,10 +1,8 @@
 import axios from 'axios'
-
 export const AxiosInterceptor = axios.create({
-    baseURL: process.env.BASE_URL || "http://localhost:8006/api/",
+    baseURL: "http://localhost:8006/api/",
 });
   
-
 // Add a request interceptor
 AxiosInterceptor.interceptors.request.use(
   config => {

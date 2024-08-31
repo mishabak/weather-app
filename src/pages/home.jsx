@@ -14,7 +14,7 @@ function HomePage() {
         />
         <meta name="keywords" content="home, weather, temperature" />
       </Helmet>
-      <section className="xs:flex xs:items-center xs:justify-center xs:h-screen mt-10 xs:mt-0">
+      <section className="xs:flex xs:items-center xs:justify-center xs:h-screen mt-10 xs:mt-0 overflow-hidden">
         <img
           className="fixed xs:hidden w-full h-full object-cover z-[-1]"
           src="src/assets/icons/mobileBg.svg"

@@ -1,4 +1,6 @@
-const Sun = ({ fill = "#EFAA82", className }) => {
+import propTypes from "prop-types";
+
+function Icon_sun({ fill = "#EFAA82", className }) {
   return (
     <svg
       className={className}
@@ -14,5 +16,11 @@ const Sun = ({ fill = "#EFAA82", className }) => {
       />
     </svg>
   );
+}
+
+Icon_sun.propTypes = {
+  className: propTypes.string,
+  fill: propTypes.string,
 };
-export const CustomIcons_ = { Sun };
+
+export default Icon_sun;
