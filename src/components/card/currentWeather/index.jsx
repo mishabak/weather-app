@@ -12,7 +12,7 @@ function CurrentWeather() {
   return (
     <motion.div
       variants={variant_.LR}
-      className=" bg-currentWeather text-currentWeather rounded-[16.78px] p-6 w-[250px] text-center  font-poppins"
+      className=" bg-currentWeather text-textWeather rounded-[16.78px] p-6 w-[250px] text-center  font-poppins"
     >
       <Dropdown
         loader={loader}

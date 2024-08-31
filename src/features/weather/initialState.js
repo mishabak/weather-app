@@ -10,4 +10,5 @@ export default {
     data: [],
     loader: false,
   },
+  theme: localStorage.getItem("themeId") || 1,
 };

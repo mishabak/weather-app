@@ -3,31 +3,65 @@
 @tailwind utilities;
 
 :root {
+  --theme-1: #d0cda4;
+  --theme-2:#b8e9c6;
+  --theme-3: #abd4e2;
+  --theme-4: #d7a9a2;
+  --theme-5: #d0d3e0;
+}
+
+.theme-1 {
   --clr1: #FAE2BD;
   --clr2: #EFAA82;
-  --clr3: #d9b580;
+  --clr3: #c8bdac;
+  --mainBg: #c8bdac;
+  --img1: url('src/assets/icons/bg-img-1.svg');
+  --radial: rgba(27, 47, 49, 0.525) 0%, rgba(64, 102, 106, 0.225) 100%;
+
 }
+
+
+
+.theme-2 {
+  --clr1: #40666A;
+  --clr2: #C9E8E0;
+  --clr3: #40666A;
+  --img1: url('src/assets/icons/bg-img-2.svg');
+  --radial: rgba(64, 102, 106, 0.525) 0%, rgba(64, 102, 106, 0.225) 100%;
+}
+
+
+.theme-3 {
+  --clr1: #5A8BAB;
+  --clr2: #AED5E4;
+  --clr3: #40666A;
+  --img1: url('src/assets/icons/bg-img-3.svg');
+  --radial: rgba(90, 139, 171, 0.525) 0%, rgba(90, 139, 171, 0.225) 100%;
+}
+
+.theme-4 {
+  --clr1: #AC736A;
+  --clr2: #F6C8A4;
+  --clr3: #40666A;
+  --img1: url('src/assets/icons/bg-img-4.svg');
+  --radial: rgba(172, 115, 106, 0.525) 0%, rgba(172, 115, 106, 0.225) 100%;
+}
+
+.theme-5 {
+  --clr1: #A7ACC4;
+  --clr2: #E2E2E3;
+  --clr3: #40666A;
+  --img1: url('src/assets/icons/bg-img-5.svg');
+  --radial: rgba(167, 172, 196, 0.525) 0%, rgba(167, 172, 196, 0.225) 100%;
+}
+
 
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var( --clr2);
 }
 
-
-
-
-/* @media (prefers-color-scheme: light) {
-
-  :root {
-    --clr1: #a08245;
-    --clr2: #ac6c47;
-  }
-
-} */
-
-
 .today-radial {
-  background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(250, 226, 189, 0.525) 0%, rgba(250, 226, 189, 0.225) 100%);
+  background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, var(--radial));
   backdrop-filter: blur(13.9394px);
 }

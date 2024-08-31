@@ -13,6 +13,7 @@ const weatherSlice = createSlice({
 const selector = (state) => state.weather;
 const cities = createSelector([selector], (state) => state.cities);
 const selectedCity = createSelector([selector], (state) => state.selectedCity);
+const theme = createSelector([selector], (state) => state.theme);
 const searchWeather = createSelector(
   [selector],
   (state) => state.searchWeather
@@ -29,4 +30,5 @@ export const weatherSelector = {
   selectedCity,
   currentWeather,
   searchWeather,
+  theme,
 };

@@ -13,11 +13,11 @@ function Dropdown({ items = [], cback = () => {}, selected = {} }) {
       </div>
       <MenuItems
         transition
-        className="absolute left-0 z-10 mt-2 w-32 px-2  origin-top-right rounded-md bg-transparent backdrop-blur-md shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+        className="absolute left-0 z-10 mt-2 w-32 px-2  origin-top-right rounded-md today-radial shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
       >
         {items.map((data, idx) => {
           return (
-            <div key={idx} className="px-3 py-1 text-black">
+            <div key={idx} className="px-3 py-1 text-textWeather">
               <MenuItem>
                 <div
                   className={`${

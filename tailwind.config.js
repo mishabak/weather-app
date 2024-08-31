@@ -3,14 +3,18 @@ export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     extend: {
-      backgroundColor: {
+      colors: {
         currentWeather: "var(--clr1)",
-      },
-      textColor: {
-        currentWeather: "var(--clr2)",
+        textWeather: "var(--clr2)",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+      },
+      backgroundImage: {
+        "card-img": "var(--img1)",
+      },
+      boxShadow: {
+        "card-outer": "0px 0px 2px 8px var(--clr1)",
       },
     },
     screens: {

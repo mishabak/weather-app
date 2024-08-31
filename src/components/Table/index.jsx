@@ -3,10 +3,10 @@ import propTypes from "prop-types";
 
 function Table({ tableData = [], loader = false }) {
   return (
-    <div className="max-w-[800px] bg-white overflow-x-scroll rounded-lg mt-[25px] ml-auto mr-auto">
+    <div className="max-w-[800px] bg-white overflow-x-scroll rounded-lg mt-[25px] ml-auto mr-auto max-h-[600px]">
       {tableData.length > 0 ? (
-        <table className="w-full">
-          <thead>
+        <table className="w-full relative">
+          <thead className="sticky top-0 z-[5]">
             <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
               <th className="py-3 px-6 text-left">ID</th>
               <th className="py-3 px-6 text-left">Temperature</th>
