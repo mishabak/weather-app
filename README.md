@@ -23,7 +23,6 @@ To get started with the project, follow these steps:
 1. **Clone the Repository**
 
    git clone [https://github.com/mishabak/weather-app.git]
-   - ** cd   <repository-directory> **-
   
 2. **Install dependencies**
    npm install
