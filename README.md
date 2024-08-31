@@ -20,16 +20,11 @@ Welcome to the Weather App! This project is a weather website built using modern
 
 To get started with the project, follow these steps:
 
-1. **Clone the Repository**
+```bash
+   git clone https://github.com/mishabak/weather-app.git
 
-   git clone [https://github.com/mishabak/weather-app.git]
-  
-2. **Install dependencies**
    npm install
-
-  
-3. **start the development server**
-     npm run dev
+   npm run dev
      
     
 
