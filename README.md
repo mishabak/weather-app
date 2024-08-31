@@ -1,8 +1,8 @@
-# React + Vite
+WEATHER APP
+Created A Weather website using, - react.js, redux-tool-kit, framer-motion, tailwind etc.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+homepage route   /weather
+list page route  /list
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+node v20.17.0 (npm v10.8.2)
+start developmen script uisng -- npm run dev
