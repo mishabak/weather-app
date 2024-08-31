@@ -1,6 +1,6 @@
 import propTypes from "prop-types";
 import { ThreeDots } from "react-loader-spinner";
-function Icon_loader({ height = "16", color = "#ffff" }) {
+function Loader({ height = "16", color = "#ffff" }) {
   return (
     <ThreeDots
       height={height}
@@ -15,9 +15,9 @@ function Icon_loader({ height = "16", color = "#ffff" }) {
   );
 }
 
-Icon_loader.propTypes = {
+Loader.propTypes = {
   height: propTypes.string,
   color: propTypes.string,
 };
 
-export default Icon_loader;
+export default Loader;

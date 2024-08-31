@@ -27,6 +27,17 @@ const Select = ({
             anchor="bottom end"
             className="w-52 mt-2 origin-top-right rounded-xl border text-[12px] backdrop-blur-md text-black transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
           >
+            {value.label && value.value && (
+              <MenuItem>
+                <button
+                  onClick={() => cback(name, {})}
+                  className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10 data-[focus]:text-gray-600"
+                >
+                  <span className="font-semibold">Un Select</span>
+                </button>
+              </MenuItem>
+            )}
+
             {options?.length > 0 &&
               options?.map((data, idx) => (
                 <MenuItem key={idx}>

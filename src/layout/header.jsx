@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Icon_Sun } from "../components/icons";
+import { ThemeButton } from "../components";
 function Header() {
   return (
     <header className="fixed top-0 backdrop-blur-md bg-transparent z-10 sm:h-12 md:h-16  h-12 shadow-lg w-full flex items-center justify-between px-3">
@@ -22,6 +23,7 @@ function Header() {
           LIST
         </Link>
       </div>
+      <ThemeButton />
     </header>
   );
 }
