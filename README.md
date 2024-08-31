@@ -17,10 +17,11 @@ Welcome to the Weather App! This project is a weather website built using modern
   - **Route**: `/list`
 
 ## Installation
-
+- Node.js (version 20.17.0)
 To get started with the project, follow these steps:
 
 ```bash
+    
    git clone https://github.com/mishabak/weather-app.git
 
    npm install
