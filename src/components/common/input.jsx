@@ -9,7 +9,7 @@ const Input = ({ children, cback = () => {}, type = "text", ...props }) => {
       <input
         type={type}
         onChange={(e) => cback(props.name, e.target.value)}
-        className={` w-full outline-none mt-4 bg-white rounded-md px-2 text-xs py-1`}
+        className={` w-full outline-none mt-4 bg-white rounded-md px-2 text-xs py-1 min-w-44`}
         {...props}
       />
     </div>

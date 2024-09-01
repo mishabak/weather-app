@@ -17,9 +17,9 @@ const Select = ({
       </div>
       <div className="mt-4">
         <Menu>
-          <MenuButton className="inline-flex items-center gap-2 bg-white text-black px-2 py-1 rounded-md text-[12px] min-w-28">
+          <MenuButton className="inline-flex justify-between gap-2 bg-white text-black px-2 py-1 rounded-md text-[12px] min-w-44">
             {value.label || label}
-            <ChevronDownIcon className="size-4 fill-white/60" />
+            <ChevronDownIcon className="size-4 fill-black/60" />
           </MenuButton>
 
           <MenuItems
