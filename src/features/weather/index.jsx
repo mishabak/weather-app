@@ -9,7 +9,7 @@ function Weather() {
   const { scaleUp } = customHooks_.useTransition();
   const commomProps = customHooks_.useCurrentWeather();
   return (
-    <div className="w-fit h-fit md:scale-125 lg:scale-150">
+    <div className="w-fit h-fit md:scale-125 lg:scale-150 duration-500">
       <motion.section
         variants={scaleUp}
         className=" 
