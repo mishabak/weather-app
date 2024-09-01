@@ -9,7 +9,7 @@ function Table({ tableData = [], loader = false, columns = [] }) {
   return (
     <Paper
       className="ml-auto mr-auto mt-[25px]"
-      sx={{ height: 400, maxWidth: "800px", minWidth: "280px" }}
+      sx={{ height: 400, maxWidth: "800px" }}
     >
       <DataGrid
         rows={loader ? [] : tableData.map((e, idx) => ({ id: idx + 1, ...e }))}

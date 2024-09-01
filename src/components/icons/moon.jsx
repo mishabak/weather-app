@@ -8,7 +8,7 @@ function Moon({ className, ...props }) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className={`${className} size-6`}
+      className={` size-6 ${className}`}
     >
       <path
         fillRule="evenodd"
