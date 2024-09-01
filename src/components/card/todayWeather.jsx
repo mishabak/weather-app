@@ -2,9 +2,9 @@ import { Fragment } from "react";
 import WeatherTimeIndicator from "../common/weatherTimeIndicator";
 import { customHooks_ } from "../../hooks";
 import { motion } from "framer-motion";
+import propTypes from "prop-types";
 
-function TodayWeather() {
-  const { selectedCountry, loader } = customHooks_.useCurrentWeather();
+function TodayWeather({ selectedCountry = [], loader = false }) {
   const { variant_ } = customHooks_.useTransition();
 
   return (
@@ -28,5 +28,10 @@ function TodayWeather() {
     </motion.div>
   );
 }
+
+TodayWeather.propTypes = {
+  selectedCountry: propTypes.array,
+  loader: propTypes.bool,
+};
 
 export default TodayWeather;

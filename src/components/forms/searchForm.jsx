@@ -1,11 +1,10 @@
 import { ErrorMessage, Formik } from "formik";
 import { validationSchema } from "./schema";
-import { customHooks_ } from "../../hooks";
 import Input from "../common/input";
 import Select from "../common/select";
 import Button from "../common/button";
-function SearchForm() {
-  const { handleSearch, options } = customHooks_.UseList();
+import propTypes from "prop-types";
+function SearchForm({ handleSearch, options }) {
   return (
     <Formik
       initialValues={{ startDate: "", endDate: "", country: {} }}
@@ -66,5 +65,9 @@ function SearchForm() {
     </Formik>
   );
 }
+SearchForm.propTypes = {
+  options: propTypes.array,
+  handleSearch: propTypes.func,
+};
 
 export default SearchForm;

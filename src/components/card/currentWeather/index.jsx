@@ -4,10 +4,15 @@ import AboutCity from "./aboutCity";
 import FeelLIke from "./feelLike";
 import NowTemp from "./nowTemp";
 import { motion } from "framer-motion";
-function CurrentWeather() {
+import propTypes from "prop-types";
+function CurrentWeather({
+  cities = [],
+  selectedCity = {},
+  handleCback = () => {},
+  selectedCountry = [],
+  loader = false,
+}) {
   const { variant_ } = customHooks_.useTransition();
-  const { cities, selectedCity, handleCback, selectedCountry, loader } =
-    customHooks_.useCurrentWeather();
 
   return (
     <motion.div
@@ -26,5 +31,13 @@ function CurrentWeather() {
     </motion.div>
   );
 }
+
+CurrentWeather.propTypes = {
+  cities: propTypes.array,
+  selectedCity: propTypes.object,
+  handleCback: propTypes.func,
+  selectedCountry: propTypes.array,
+  loader: propTypes.bool,
+};
 
 export default CurrentWeather;
