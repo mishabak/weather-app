@@ -9,7 +9,7 @@ function CurrentWeather({
   cities = [],
   selectedCity = {},
   handleCback = () => {},
-  selectedCountry = [],
+  selectedCountry = {},
   loader = false,
 }) {
   const { variant_ } = customHooks_.useTransition();
@@ -36,7 +36,7 @@ CurrentWeather.propTypes = {
   cities: propTypes.array,
   selectedCity: propTypes.object,
   handleCback: propTypes.func,
-  selectedCountry: propTypes.array,
+  selectedCountry: propTypes.object,
   loader: propTypes.bool,
 };
 

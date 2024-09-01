@@ -26,7 +26,7 @@ function WeatherTimeIndicator({
 
 WeatherTimeIndicator.propTypes = {
   time: propTypes.string,
-  temp: propTypes.string,
+  temp: propTypes.any,
   img: propTypes.string,
   loader: propTypes.bool,
 };

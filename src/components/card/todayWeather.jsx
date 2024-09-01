@@ -4,7 +4,7 @@ import { customHooks_ } from "../../hooks";
 import { motion } from "framer-motion";
 import propTypes from "prop-types";
 
-function TodayWeather({ selectedCountry = [], loader = false }) {
+function TodayWeather({ selectedCountry = {}, loader = false }) {
   const { variant_ } = customHooks_.useTransition();
 
   return (
@@ -30,7 +30,7 @@ function TodayWeather({ selectedCountry = [], loader = false }) {
 }
 
 TodayWeather.propTypes = {
-  selectedCountry: propTypes.array,
+  selectedCountry: propTypes.object,
   loader: propTypes.bool,
 };
 
