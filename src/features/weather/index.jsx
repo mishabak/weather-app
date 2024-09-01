@@ -9,24 +9,24 @@ function Weather() {
   const { scaleUp } = customHooks_.useTransition();
   const commomProps = customHooks_.useCurrentWeather();
   return (
-    <div className="w-fit h-fit md:scale-125 lg:scale-150 duration-500">
-      <motion.section
-        variants={scaleUp}
+    <motion.div variants={scaleUp} className="w-fit h-fit ">
+      <section
         className=" 
-      overflow-hidden
+          overflow-hidden
           xs:shadow-card-outer
           xs:bg-card-img
           bg-no-repeat bg-position bg-cover flex flex-wrap
           px-[16px] py-9 xs:rounded-[16.78px] gap-4
-          w-full max-w-[549px] h-auto items-center justify-center top-0 duration-500"
+          md:scale-125 lg:scale-150 duration-500
+          w-full max-w-[549px] h-auto items-center justify-center top-0"
       >
         <CurrentWeatherCard {...commomProps} />
         <div className="flex flex-col">
           <TodayWeatherCard {...commomProps} />
           <DescriptionCard className="mt-4" />
         </div>
-      </motion.section>
-    </div>
+      </section>
+    </motion.div>
   );
 }
 

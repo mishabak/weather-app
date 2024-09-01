@@ -46,16 +46,14 @@ const useTransition = () => {
   const scaleUp = {
     initial: {
       scale: 1.2,
-      opacity: 0.5,
     },
     enter: {
       scale: 1,
-      opacity: 1,
-      transition: { duration: 0.1 },
+
+      transition: { duration: 0.7, delay: 0.3 },
     },
     exit: {
-      opacity: 0.5,
-      transition: { duration: 0.1 },
+      transition: { duration: 0.7, delay: 0.3 },
     },
   };
 
