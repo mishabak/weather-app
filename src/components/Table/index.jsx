@@ -1,65 +1,35 @@
-import { Icon_Loader } from "../icons";
+import { Paper } from "@mui/material";
 import propTypes from "prop-types";
+import { DataGrid } from "@mui/x-data-grid";
 
-function Table({ tableData = [], loader = false }) {
+function Table({ tableData = [], loader = false, columns = [] }) {
+  const paginationModel = { page: 0, pageSize: 5 };
+  const localText = { noRowsLabel: " Data not found" };
+
   return (
-    <div className="max-w-[800px] bg-white overflow-x-scroll rounded-lg mt-[25px] ml-auto mr-auto max-h-[600px]">
-      {tableData.length > 0 ? (
-        <table className="w-full relative">
-          <thead className="sticky top-0 z-[5]">
-            <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-              <th className="py-3 px-6 text-left">ID</th>
-              <th className="py-3 px-6 text-left">Temperature</th>
-              <th className="py-3 px-6 text-center">Location</th>
-              <th className="py-3 px-6 text-center">Date and Time</th>
-              <th className="py-3 px-6 text-center">Icon</th>
-            </tr>
-          </thead>
-          <tbody className="text-gray-600 text-sm font-light">
-            {tableData.map((data, idx) => (
-              <tr key={idx}>
-                <td className="py-3 px-6 text-left whitespace-nowrap">
-                  <div className="flex items-center">
-                    <div className="mr-2">{idx + 1}</div>
-                  </div>
-                </td>
-                <td className="py-3 px-6 text-center">
-                  {data?.current?.temp_c || `-`}
-                  <sup>°</sup>
-                </td>
-                <td className="py-3 px-6 text-center">
-                  {data?.location?.country || `-`}
-                </td>
-                <td className="py-3 px-6 text-center">
-                  {data?.current?.last_updated || `-`}
-                </td>
-                <td className="py-3 px-6 text-center">
-                  <img
-                    className="w-6 h-6 rounded-full"
-                    src={`https:${data?.current?.condition?.icon}`}
-                    alt="Icon"
-                  />
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      ) : (
-        <div className="flex justify-center items-center h-40">
-          {loader ? (
-            <Icon_Loader color={"black"} />
-          ) : (
-            <p className="text-gray-600 text-sm">Data not found!</p>
-          )}
-        </div>
-      )}
-    </div>
+    <Paper
+      className="ml-auto mr-auto mt-[25px]"
+      sx={{ height: 400, maxWidth: "800px", minWidth: "280px" }}
+    >
+      <DataGrid
+        rows={loader ? [] : tableData.map((e, idx) => ({ id: idx + 1, ...e }))}
+        columns={columns}
+        initialState={{ pagination: { paginationModel } }}
+        pageSizeOptions={[5, 10]}
+        sx={{ border: 0 }}
+        disableColumnMenu={true}
+        disableColumnResize={true}
+        loading={loader}
+        localeText={localText}
+      />
+    </Paper>
   );
 }
 
 Table.propTypes = {
   tableData: propTypes.string,
   loader: propTypes.string,
+  columns: propTypes.arrayr,
 };
 
 export default Table;

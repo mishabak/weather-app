@@ -4,6 +4,7 @@ import Table from "../components/Table";
 import { customHooks_ } from "../hooks";
 import { motion } from "framer-motion";
 import SearchForm from "../components/forms/searchForm";
+import tableColumn from "../components/Table/column";
 
 function List() {
   const { variant_ } = customHooks_.useTransition();
@@ -25,7 +26,7 @@ function List() {
         className="px-4 md:px-8 lg:px-12 mt-16 md:mt-28 w-full"
       >
         <SearchForm {...commonProps} />
-        <Table {...commonProps} />
+        <Table columns={tableColumn.weather} {...commonProps} />
       </motion.section>
     </Fragment>
   );
