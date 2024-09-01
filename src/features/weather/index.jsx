@@ -5,11 +5,14 @@ import {
 } from "../../components";
 import { motion } from "framer-motion";
 import { customHooks_ } from "../../hooks";
+import { weatherSelector } from "./slice";
+import { useSelector } from "react-redux";
 function Weather() {
   const { scaleUp } = customHooks_.useTransition();
   const commomProps = customHooks_.useCurrentWeather();
+  const theme = useSelector(weatherSelector.theme);
   return (
-    <motion.div variants={scaleUp} className="w-fit h-fit ">
+    <motion.div key={theme} variants={scaleUp} className="w-fit h-fit ">
       <section
         className=" 
           overflow-hidden
