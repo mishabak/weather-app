@@ -15,7 +15,7 @@
   --clr2: #EFAA82;
   --clr3: #c8bdac;
   --mainBg: #c8bdac;
-  --img1: url('src/assets/icons/bg-img-1.svg');
+  --img1: url('src/assets/bgImages/bg-img-1.svg');
   --radial: rgba(27, 47, 49, 0.525) 0%, rgba(64, 102, 106, 0.225) 100%;
 
 }
@@ -26,7 +26,7 @@
   --clr1: #40666A;
   --clr2: #C9E8E0;
   --clr3: #40666A;
-  --img1: url('src/assets/icons/bg-img-2.svg');
+  --img1: url('src/assets/bgImages/bg-img-2.svg');
   --radial: rgba(64, 102, 106, 0.525) 0%, rgba(64, 102, 106, 0.225) 100%;
 }
 
@@ -35,7 +35,7 @@
   --clr1: #5A8BAB;
   --clr2: #AED5E4;
   --clr3: #40666A;
-  --img1: url('src/assets/icons/bg-img-3.svg');
+  --img1: url('src/assets/bgImages/bg-img-3.svg');
   --radial: rgba(90, 139, 171, 0.525) 0%, rgba(90, 139, 171, 0.225) 100%;
 }
 
@@ -43,7 +43,7 @@
   --clr1: #AC736A;
   --clr2: #F6C8A4;
   --clr3: #40666A;
-  --img1: url('src/assets/icons/bg-img-4.svg');
+  --img1: url('src/assets/bgImages/bg-img-4.svg');
   --radial: rgba(172, 115, 106, 0.525) 0%, rgba(172, 115, 106, 0.225) 100%;
 }
 
@@ -51,7 +51,7 @@
   --clr1: #A7ACC4;
   --clr2: #E2E2E3;
   --clr3: #40666A;
-  --img1: url('src/assets/icons/bg-img-5.svg');
+  --img1: url('src/assets/bgImages/bg-img-5.svg');
   --radial: rgba(167, 172, 196, 0.525) 0%, rgba(167, 172, 196, 0.225) 100%;
 }
 
