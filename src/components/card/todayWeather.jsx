@@ -3,7 +3,7 @@ import WeatherTimeIndicator from "../common/weatherTimeIndicator";
 import { customHooks_ } from "../../hooks";
 import { motion } from "framer-motion";
 import propTypes from "prop-types";
-
+import moment from 'moment'
 function TodayWeather({ selectedCountry = {}, loader = false }) {
   const { variant_ } = customHooks_.useTransition();
 
@@ -16,12 +16,12 @@ function TodayWeather({ selectedCountry = {}, loader = false }) {
         ? [...Array(10)].map((data, key) => (
             <WeatherTimeIndicator key={key} loader={true} />
           ))
-        : selectedCountry.hour?.slice(0, 10)?.map((data, idx) => (
+        : selectedCountry.hour.map((data, idx) => (
             <Fragment key={idx}>
               <WeatherTimeIndicator
                 img={data?.condition?.icon}
                 temp={data?.temp_c || ""}
-                time={idx == 0 ? "Now" : data?.time?.split(" ")[1]}
+                time={data.now ? "Now" : moment(data?.time).format("h A")}
               />
             </Fragment>
           ))}
