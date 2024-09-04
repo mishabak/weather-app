@@ -24,7 +24,7 @@ function useCurrentWeather() {
       feelLike: Math.round(currentWeather?.data?.current?.feelslike_c) || "-",
     };
 
-    return { current, hour: currentWeather?.data?.hour || [] };
+    return { current, hour: currentWeather?.data?.hour || [],sunset:currentWeather?.data?.sunset||"" };
   }, [currentWeather.data]);
 
   return {
