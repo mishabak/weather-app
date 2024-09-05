@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Layout from "./layout";
-import "./App.css";
+import "./assets/styles/app.css";
 import { Icon_Loader } from "./components/icons";
 
 const Home = lazy(() => import("./pages/home"));
