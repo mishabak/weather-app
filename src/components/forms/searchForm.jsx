@@ -32,9 +32,8 @@ function SearchForm({ handleSearch, options }) {
               cback={handleCallback}
               onBlur={handleBlur}
               value={values.startDate}
-              type="text"
+              type="date"
               name="startDate"
-              placeholder="YYYY-MM-DD"
               onFocus={(e)=>e.type="password"}
             >
               <ErrorMessage name={"startDate"} component="div" />
