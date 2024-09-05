@@ -6,7 +6,13 @@ function NowTemp({ selectedCountry = {}, loader = false }) {
 
   return (
     <div className="mt-5">
-      <div className="flex flex-nowrap justify-center items-center gap-[9.5px]">
+      <div
+        className="
+        flex flex-nowrap
+        justify-center
+        items-center
+        gap-[9.5px]"
+      >
         {selectedCountry?.current?.icon ? (
           <img
             className="w-14  drop-shadow-lg"

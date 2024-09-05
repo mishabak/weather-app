@@ -7,6 +7,7 @@ import {
 import { lazy, Suspense } from "react";
 import Layout from "./layout";
 import "./App.css";
+import { Icon_Loader } from "./components/icons";
 
 const Home = lazy(() => import("./pages/home"));
 const NotFound = lazy(() => import("./pages/notFound"));
@@ -16,7 +17,7 @@ function App() {
   return (
     <Router>
       <Layout>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Icon_Loader />}>
           <Routes>
             <Route path="/" element={<Navigate to={`weather`} />} />
             <Route path="/weather" element={<Home />} />

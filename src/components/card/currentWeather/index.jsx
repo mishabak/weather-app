@@ -1,29 +1,33 @@
 import { customHooks_ } from "../../../hooks";
 import Dropdown from "../../common/dropdown";
+import { motion } from "framer-motion";
 import AboutCity from "./aboutCity";
+import propTypes from "prop-types";
 import FeelLIke from "./feelLike";
 import NowTemp from "./nowTemp";
-import { motion } from "framer-motion";
-import propTypes from "prop-types";
 function CurrentWeather({
-  cities = [],
-  selectedCity = {},
   handleCback = () => {},
   selectedCountry = {},
+  selectedCity = {},
   loader = false,
+  cities = [],
 }) {
   const { variant_ } = customHooks_.useTransition();
 
   return (
     <motion.div
       variants={variant_.LR}
-      className=" bg-currentWeather text-textWeather rounded-[16.78px] p-6 w-[250px] text-center  font-poppins"
+      className="
+      bg-currentWeather text-textWeather 
+      rounded-[16.78px] p-6 w-[250px] 
+      text-center  font-poppins"
     >
       <Dropdown
-        loader={loader}
-        selected={selectedCity}
         items={cities}
+        label={"Today"}
+        loader={loader}
         cback={handleCback}
+        selected={selectedCity}
       />
       <NowTemp loader={loader} selectedCountry={selectedCountry} />
       <AboutCity loader={loader} selectedCountry={selectedCountry} />
@@ -33,10 +37,10 @@ function CurrentWeather({
 }
 
 CurrentWeather.propTypes = {
-  cities: propTypes.array,
+  selectedCountry: propTypes.object,
   selectedCity: propTypes.object,
   handleCback: propTypes.func,
-  selectedCountry: propTypes.object,
+  cities: propTypes.array,
   loader: propTypes.bool,
 };
 
