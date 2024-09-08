@@ -29,7 +29,7 @@ function Table({ tableData = [], loader = false, columns = [] }) {
 Table.propTypes = {
   tableData: propTypes.string,
   loader: propTypes.string,
-  columns: propTypes.arrayr,
+  columns: propTypes.array,
 };
 
 export default Table;
