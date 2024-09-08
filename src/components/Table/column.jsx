@@ -15,7 +15,6 @@ const tableColumn = {
         </div>
       ),
     },
-
     {
       field: "country",
       headerName: "Country",
