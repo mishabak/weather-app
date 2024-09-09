@@ -18,8 +18,8 @@ function HomePage() {
         className="
         xs:flex xs:items-center
         xs:justify-center
-        xs:h-screen mt-10
-        xs:mt-0 overflow-hidden">
+        xs:h-screen 
+        overflow-hidden">
         <div
           className="
           fixed xs:hidden w-full
