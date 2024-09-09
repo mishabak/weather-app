@@ -14,7 +14,7 @@ export default {
         "card-img": "var(--img1)",
       },
       boxShadow: {
-        "card-outer": "0px 0px 2px 8px var(--clr1)",
+        "card-outer": "0px 0px 1px 8px var(--clr1)",
       },
     },
     screens: {
