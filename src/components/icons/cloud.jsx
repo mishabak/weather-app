@@ -53,7 +53,7 @@ function Cloud({ themeId = "" }) {
 }
 
 Cloud.propTypes = {
-  themeId: propTypes.number,
+  themeId: propTypes.string,
 };
 
 export default Cloud;
