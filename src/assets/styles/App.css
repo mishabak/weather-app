@@ -1,6 +1,35 @@
-.bg-position{
+.bg-position {
   background-position: 0 79%;
 }
-.shadhow-custom{
+
+.shadhow-custom {
   display: none;
+}
+
+.rain {
+  animation: fall infinite linear;
+  opacity: 0;
+}
+
+@keyframes fall {
+
+  0% {
+    opacity: 0.1;
+  }
+
+  20% {
+    opacity: 0.2;
+  }
+  40%{
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0.2;
+    transform: translateY(41vh)
+  }
 }
