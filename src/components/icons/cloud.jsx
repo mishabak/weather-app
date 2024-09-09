@@ -3,13 +3,11 @@ import propTypes from "prop-types";
 function Cloud({ themeId = "" }) {
   return (
     <svg
-      className="absolute z-[1] main-bg-svg"
+      className="fixed z-[1] top-0 w-full min-h-[50%]"
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
       xmlns:svgjs="http://svgjs.dev/svgjs"
-      width="100%"
-      height="50%"
       preserveAspectRatio="none"
       viewBox="0 0 1440 560"
     >
