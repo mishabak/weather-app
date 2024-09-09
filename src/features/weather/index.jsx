@@ -12,11 +12,12 @@ function Weather() {
   const commomProps = customHooks_.useCurrentWeather();
   const theme = useSelector(weatherSelector.theme);
   return (
-    <motion.div key={theme} variants={scaleUp} className="w-fit h-fit ">
+    <motion.div key={theme} variants={scaleUp} className="w-fit h-fit  mt-10 xs:mt-0">
       <section
         className=" 
           overflow-hidden
           xs:shadow-card-outer
+          xs:bg-currentWeather
           xs:bg-card-img
           bg-no-repeat bg-position bg-cover flex flex-wrap
           px-[16px] py-9 xs:rounded-[16.78px] gap-4

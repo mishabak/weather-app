@@ -23,7 +23,7 @@ function List() {
 
       <motion.section
         variants={variant_.TB}
-        className="px-4 md:px-8 lg:px-12 mt-16 md:mt-28 w-full"
+        className="px-4 md:px-8 lg:px-12 pt-16 md:pt-28 w-full xs:h-screen"
       >
         <SearchForm {...commonProps} />
         <Table columns={tableColumn.weather} {...commonProps} />

@@ -8,7 +8,7 @@ function ThemeButton() {
     <div>
       <Icon_moon
         onClick={handleSelect}
-        className={`cursor-pointer hover:scale-105 md:size-8 fill-currentWeather stroke-textWeather`}
+        className={`cursor-pointer hover:scale-105 md:size-8 fill-currentWeather stroke-textWeather brightness-75 xs:brightness-100`}
       />
     </div>
   );
