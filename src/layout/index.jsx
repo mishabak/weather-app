@@ -6,14 +6,18 @@ import Header from "./header";
 import { AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
 import { weatherSelector } from "../features/weather/slice";
+import { Icon_Cloud } from "../components/icons";
 function Layout({ children }) {
   const { fadeVariant } = customHooks_.useTransition();
   const theme = useSelector(weatherSelector.theme);
   return (
     <main className={`theme-${theme}`}>
+      <Icon_Cloud themeId={theme} />
       <Header />
       <AnimatePresence>
-        <CustomAnimate variant={fadeVariant}>{children}</CustomAnimate>
+        <CustomAnimate className="relative z-[2]" variant={fadeVariant}>
+          {children}
+        </CustomAnimate>
       </AnimatePresence>
       <Footer />
       <style>{`
