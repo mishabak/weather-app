@@ -24,7 +24,7 @@ function Header() {
           <Link
             key={idx}
             className={`font-light hover:scale-105 hover:font-semibold duration-150 ${
-              location.pathname.includes(path) && `brightness-125`
+              location.pathname.includes(path) && `brightness-125 underline`
             }`}
             to={path}
           >
