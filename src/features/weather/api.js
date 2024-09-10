@@ -19,7 +19,10 @@ const currentTemperature = createAsyncThunk(
         });
       }
     } catch (error) {
-      throw rejectWithValue(error?.response?.data || error);
+      throw rejectWithValue({
+        message:
+          error?.response?.data || error.message || "something went wrong",
+      });
     }
   }
 );
@@ -33,7 +36,10 @@ const searchWeather = createAsyncThunk(
       });
       return res.data?.result || [{}];
     } catch (error) {
-      throw rejectWithValue(error?.response?.data || error);
+      throw rejectWithValue({
+        message:
+          error?.response?.data || error.message || "something went wrong",
+      });
     }
   }
 );
