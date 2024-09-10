@@ -40,8 +40,10 @@ function Dropdown({ label, items = [], cback = () => {}, selected = {} }) {
             <div key={idx} className="px-3 py-1 text-textWeather">
               <MenuItem>
                 <div
-                  className={`${
-                    data?.name == selected?.name ? `text-gray-500` : ""
+                  className={` ${
+                    data?.name == selected?.name
+                      ? `text-gray-500 cursor-not-allowed`
+                      : "cursor-pointer"
                   }`}
                   onClick={() => cback(data)}
                 >
