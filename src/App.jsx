@@ -5,7 +5,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import Layout from "./layout";
+import Layout from "./features/layout";
 import "./assets/styles/app.css";
 import { Icon_Loader } from "./components/icons";
 
