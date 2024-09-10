@@ -5,12 +5,12 @@ import {
 } from "../../components";
 import { motion } from "framer-motion";
 import { customHooks_ } from "../../hooks";
-import { weatherSelector } from "./slice";
 import { useSelector } from "react-redux";
+import { layoutSelector } from "../layout/slice";
 function Weather() {
   const { scaleUp } = customHooks_.useTransition();
   const commomProps = customHooks_.useCurrentWeather();
-  const theme = useSelector(weatherSelector.theme);
+  const theme = useSelector(layoutSelector.theme);
   return (
     <motion.div key={theme} variants={scaleUp} className="w-fit h-fit  mt-10 xs:mt-0">
       <section

@@ -9,6 +9,5 @@ export default {
   searchWeather: {
     data: [],
     loader: false,
-  },
-  theme: localStorage.getItem("themeId") || 1,
+  }
 };

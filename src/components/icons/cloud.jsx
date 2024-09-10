@@ -1,9 +1,9 @@
 import propTypes from "prop-types";
 
-function Cloud({ themeId = "" }) {
+function Cloud({ themeId = "", className = "" }) {
   return (
     <svg
-      className="fixed z-[1] top-0 w-full min-h-[50%]"
+      className={`${className} z-[1] top-0 w-full min-h-[50%]`}
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -54,6 +54,7 @@ function Cloud({ themeId = "" }) {
 
 Cloud.propTypes = {
   themeId: propTypes.string,
+  className:propTypes.string
 };
 
 export default Cloud;

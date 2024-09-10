@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { weather_actions } from "../features/weather/slice";
+import { layout_actions } from "../features/layout/slice";
 
 function useTheme() {
   const dispatch = useDispatch();
@@ -16,10 +16,10 @@ function useTheme() {
           id += 1;
         }
         localStorage.setItem("themeId", id);
-        dispatch(weather_actions.setNewTheme(id));
+        dispatch(layout_actions.setNewTheme(JSON.stringify(id)));
       } else {
-        dispatch(weather_actions.setNewTheme(2));
-        localStorage.setItem("themeId", 2);
+        dispatch(layout_actions.setNewTheme("2"));
+        localStorage.setItem("themeId", "2");
       }
     }
   };
